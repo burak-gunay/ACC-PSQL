@@ -15,7 +15,11 @@ int main(int argc, char *argv[]) {
   try {
     // Establish a connection to the database
     // Parameters: database name, user name, user password
-    C = new connection("dbname=ACC_BBALL user=postgres password=passw0rd ");
+
+    // IMPORTANT. You need to generate a DB in PSQL before you do this part. Put
+    // your own username, and password as well(according to your psql
+    // credentials)
+    C = new connection("dbname=ACC_BBALL user=user password=123456 ");
     if (C->is_open()) {
       // cout << "Opened database successfully: " << C->dbname() << endl;
     } else {
